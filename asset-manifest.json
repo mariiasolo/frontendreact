@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/frontendreact/static/css/main.4c54fe24.css",
+    "main.js": "/frontendreact/static/js/main.add3793f.js",
+    "static/js/787.97a945da.chunk.js": "/frontendreact/static/js/787.97a945da.chunk.js",
+    "index.html": "/frontendreact/index.html",
+    "main.4c54fe24.css.map": "/frontendreact/static/css/main.4c54fe24.css.map",
+    "main.add3793f.js.map": "/frontendreact/static/js/main.add3793f.js.map",
+    "787.97a945da.chunk.js.map": "/frontendreact/static/js/787.97a945da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c54fe24.css",
+    "static/js/main.add3793f.js"
+  ]
+}
