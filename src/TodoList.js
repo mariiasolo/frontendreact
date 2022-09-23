@@ -3,7 +3,7 @@ import './App.css';
 
 
 
-function App() {
+function TodoList() {
   const [desc, setDesc] = useState('');
   const [todos, setTodos] = useState([]);
 
@@ -11,6 +11,7 @@ function App() {
     setDesc(event.target.value);
   }
   const addTodo = (event) => {
+    event.preventDefault();
     setTodos([...todos, desc]);
   }
 
