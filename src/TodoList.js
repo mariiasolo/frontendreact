@@ -1,38 +1,35 @@
 import React, {useState} from 'react';
 import './App.css';
+import TodoTable from './TodoTable';
 
 
 
 function TodoList() {
-  const [desc, setDesc] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState({description: '', date: ''});
+  const [todoList, setTodoList] = useState([]);
 
   const inputChanged = (event) => {
-    setDesc(event.target.value);
+    setTodo({... todo, [event.target.name]: event.target.value});
   }
+
   const addTodo = (event) => {
     event.preventDefault();
-    setTodos([...todos, desc]);
+    setTodoList([...todoList, todo]);
   }
 
   return ( 
-    <div>
-        <input type ="text" onChange = {inputChanged} value = {desc}/>
-        <button onClick={addTodo}>Add</button>
-            <table>
-                <tbody> {
-                    todos.map(
-                        (todo, index) => 
-                        <tr key={index}>
-                            <td>{todo}</td>
-                        </tr>
-                    )
-                }
-                </tbody>
-            </table>
+    <div className = "App">
+        <form onSubmit={addTodo}>
+            <input type="date" name="date" value= {todo.date} onChange = {inputChanged} />
+            <input type="text" name = "description" value={todo.description} onChange= {inputChanged} />
+            <input type= "submit" value= "Add" />
+        
+        </form>
+        <TodoTable todoList={todoList} /> 
+       
     </div>);
              
     
 }
 
-export default App;
+export default TodoList;
